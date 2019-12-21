@@ -1,0 +1,28 @@
+<%- include ../partial/header%>
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/styleshow.css">
+</head>
+<body>
+<br><br><br><br>
+<center><table>
+  <tr><th>Expert</th><th>Lab Assistant</th><th>Technical Assistant</th><th>Peon</th><th>Hours</th></tr>
+  
+<%staff.forEach(function(staff){%>
+  <tr>
+      <td><%=staff.expert%></td> 
+      <td><%=staff.lab%></td>
+      <td><%=staff.techAsst%></td>
+      <td><%=staff.peons%></td>
+      <td><%=staff.hours%></td>
+      
+   </tr> 
+  <% });%>
+</table></centers>
+<center><a href="/rates/showstaffrates/<%=staff._id%>/edit">Edit</a></center>
+</body>
+</html>
+
+<%- include ../partial/footer%>

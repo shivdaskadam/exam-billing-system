@@ -1,0 +1,43 @@
+<%- include partial/header%>
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/styleland.css">
+</head>
+
+<body>
+<div class="reg">
+<% if(year =="SE" || year =="TE" ){%><br>
+<center><a href="/<%=year%>/oral" >Oral</a></center><br>
+<center><a href="/<%=year%>/practicalOther" >PRACTICAL(OTHER)</a></center><br>
+<center><a href="/<%=year%>/practicalSurvey" >PRACTICAL (SURVEY)</a></center><br>
+<center><a href="/<%=year%>/practicalWorkshop" >PRACTICAL (WORKSHOP)</a></center><br>
+<center><a href="/<%=year%>/termwork" >TERMWORK</a></center><br><br>
+
+<% } else if(year=="BE"){%>
+<center><a href="/<%=year%>/oral" >Oral</a></center><br>
+<center><a href="/<%=year%>/practicalOther" >PRACTICAL(OTHER)</a></center><br>
+<center><a href="/<%=year%>/practicalWorkshop" >PRACTICAL (WORKSHOP)</a></center><br>
+<center><a href="/<%=year%>/termWork" >PROJECT TERMWORK</a></center><br>
+<center><a href="/<%=year%>/prTermWork" >TERMWORK</a></center><br>
+<center><a href="/<%=year%>/prOral" >PROJECT ORAL</a></center><br>
+<center><a href="/<%=year%>/prSeminar" >PROJECT SEMINAR</a></center><br><br>
+<% } %>
+
+
+ <table>
+<%combine.forEach(function(combine){%>
+  <tr>
+   <td><%=combine.subject%></td>
+   <td><%=combine.type%></td>
+   <td><a href="/<%=combine.year%>/<%=combine.exam%>/<%=combine._id%>">View</a></td> 
+   <td><form action="/<%=combine.year%>/<%=combine.exam%>/<%=combine._id%>?_method=delete" method="post">
+   <input type="submit" value="Delete"> </form></td>
+  </tr>
+ <% }); %>  
+  </table>
+ </div>
+</body>
+</html> 
+<%- include partial/footer %>

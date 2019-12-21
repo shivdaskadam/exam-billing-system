@@ -1,0 +1,74 @@
+<%- include ./partial/header%>
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/styleland.css">
+</head>
+
+<body>
+<div class="reg">
+<% if(internalc==0){%><br>
+<center><a href="/<%=year%>/<%=exam%>/<%=id%>/teacher/internal">INTERNAL FORM</a></center><br>
+<% } %>
+
+<% if(externalc==0 && exam !="termwork"){%><br>
+<center><a href="/<%=year%>/<%=exam%>/<%=id%>/teacher/external">EXTERNAL FORM</a></center><br>
+<% } %>
+<%
+ if(norm.expert !=expertc){
+  %><br>
+ <center> <a href="/<%=year%>/<%=exam%>/<%=id%>/expert">EXPERT FORM</a></center><br>
+<%  } %>
+
+<%
+ if(norm.labAsst != labc){
+ %><br>
+   <center><a href="/<%=year%>/<%=exam%>/<%=id%>/lab">LAB ASSISTANT FORM</a></center><br>
+<%  } %>
+
+<%
+ if(norm.techAsst!= techc){
+ %><br>
+  <center> <a href="/<%=year%>/<%=exam%>/<%=id%>/techAsst">TECHNICAL ASSISTANT FORM</a></center><br>
+<%  } %>
+
+<%
+ if(norm.peon !=peonc){
+ %><br>
+  <center> <a href="/<%=year%>/<%=exam%>/<%=id%>/peons">PEON FORM</a></center><br>
+<%  } %>
+
+<br><br><br><br>
+ 
+ <strong>TeacherForms:</strong><br>
+ 
+<%combine.teacherdata.forEach(function(teacher){%>
+
+   <%=teacher.type%><br><emsp><center><a href="/<%=year%>/<%=exam%>/<%=id%>/teacher/<%=teacher.type%>/<%=teacher._id%>">View</a></center> 
+   <form action="/<%=year%>/<%=exam%>/<%=id%>/teacher/<%=teacher.type%>/<%=teacher._id%>?_method=delete" method="post">
+  <center> <input id="sub" type="submit" value="Delete"> </center>
+</form><br> <br>
+
+<% }); %>
+
+<strong>StaffForms:</strong><br>
+
+<%combine.staffdata.forEach(function(staff){%>
+
+<%=staff.type%><br></t></t></t><center><a href="/<%=year%>/<%=exam%>/<%=id%>/<%=staff.type%>/<%=staff._id%>">View</a></center>
+<form action="/<%=year%>/<%=exam%>/<%=id%>/<%=staff.type%>/<%=staff._id%>?_method=delete" method="post">
+  <center> <input id="sub" type="submit" value="Delete"></center> 
+</form><br> <br>
+
+<% }); %>
+<br><br><br>
+<form action="/<%=year%>/<%=exam%>/<%=id%>?_method=delete" method="post">
+  <center> <input id="sub" type="submit" value="Delete All data"></center> 
+</form>
+
+<center><a href="/<%=year%>">Save</a></center>
+</body>
+</div>
+</html>
+<%- include ./partial/footer%>

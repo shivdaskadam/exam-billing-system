@@ -1,0 +1,34 @@
+<%- include ../partial/header%>
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/styleshow.css">
+</head>
+<body>
+<br><br><br><br>
+<center>
+<table>
+  <tr><th>Year</th><th>Exam</th><th>Preparation Days</th><th>Cleaning Days</th><th>Expert</th><th>Lab Assistant</th><th>Technical Assistant</th>
+  <th>Peon</th><th>Batch</th></tr>
+  
+<%norm.forEach(function(norm){%>
+  <tr>
+      <td><%=norm.year%></td> 
+      <td><%=norm.exam%></td>
+      <td><%=norm.preparation%></td>
+      <td><%=norm.cleaning%></td>
+      <td><%=norm.expert%></td>
+      <td><%=norm.labAsst%></td>
+      <td><%=norm.techAsst%></td>
+      <td><%=norm.peon%></td>
+      <td><%=norm.batch%></td>
+      </tr>
+        
+  <% });%>
+</table></center>
+ <center><a href="/rates/shownorms/<%=norm._id%>/edit">Edit</a></center>
+ 
+</body>
+</html>
+<%- include ../partial/footer%>

@@ -1,0 +1,27 @@
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/stylenorm.css">
+</head>
+<body>
+<br><br>
+<div class="reg">
+<br><br>
+<form id="reg" action="/rates/shownorms/<%=norm._id%>?_method=PUT" method="POST">
+YEAR:<%=norm.year%><br><br>
+Exam:<%=norm.exam%><br><br>
+<label>Preparation days:</label>
+<input type="number" name="norm[preparation]" value=<%=norm.preparation% id="name"><br><br>
+<label>Cleaning days:</label><input type="number" name="norm[cleaning]" value=<%=norm.cleaning% id="name"><br><br>
+<label>No. of Expert:</label><input type="number" name="norm[expert]" value=<%=norm.expert% id="name"><br><br>
+<label>No. of Lab Assistant</label><input type="number" name="norm[labAsst]" value=<%=norm.labAsst% id="name" ><br><br>
+<label>No. of Technical Assistant</label><input type="number" name="norm[techAsst]" value=<%=norm.techAsst% id="name"><br><br>
+<label>No. of Peons</label><input type="number" name="norm[peon]" value=<%=norm.peon% id="name"><br><br>
+<label>Students per Batch</label><input type="number" name="norm[batch]" value=<%=norm.batch% id="name"><br><br>
+
+<button id="sub" type="submit">submit</button>
+</form>
+</div>
+</body>
+</html>

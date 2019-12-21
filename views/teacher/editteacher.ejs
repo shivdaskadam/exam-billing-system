@@ -1,0 +1,32 @@
+<%- include ../partial/header%>
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/styleteacher.css">
+</head>
+<body>
+<br><br>
+ <div class="reg">
+
+<form id="reg" action="/<%=year%>/<%=exam%>/<%=combineid%>/teacher/<%=teacherdata.type%>/<%=id%>?_method=PUT" method="POST"><br><br>
+<label> Reg No:</label>
+<input type="text" placeholder="Enter the Rem Reg  no" name="teacherdata[rem_reg]" value=<%=teacherdata.rem_reg% id="name"><br><br>
+<label> Voucher No:</label>
+<input type="text" placeholder="Enter the Voucher no" name="teacherdata[voucher]"value=<%=teacherdata.voucher% id="name"><br><br>
+<label>Cheque No:</label>
+<input type="text" placeholder="Enter the Cheque no" name="teacherdata[cheque]"value=<%=teacherdata.cheque% id="name"><br><br>
+<label>Name:</label>
+<input type="text" placeholder="Enter Name"           name="teacherdata[Name]"value=<%=teacherdata.Name% id="name"><br><br>
+<label>Telephone No:</label>
+<input type="number" placeholder="Enter Telephone no" name="teacherdata[telephone]" value=<%=teacherdata.telephone% id="name"><br><br>
+<label>Address:</label>
+<input type="text" placeholder="Enter Valid Address" name="teacherdata[address]" value=<%=teacherdata.address% id="name"><br><br>
+<label>External Name:</label>
+<input type="text" placeholder="Enter External" name="teacherdata[alongwith]" value=<%=teacherdata.alongwith% id="name"><br><br>
+<button id="sub" type="submit">submit</button>
+
+</form>
+</div>
+</html>
+<%- include ../partial/footer%>

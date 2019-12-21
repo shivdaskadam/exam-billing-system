@@ -1,0 +1,45 @@
+<%- include ../partial/header%>
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/styleshow.css">
+</head>
+ <br><br><br><br>
+<body>
+<center><table>
+ <tr>
+  <th>Year</th>
+ <td><%=teacher.year%></td>
+ <tr>
+<th>Oral.</th>
+ <td><%=teacher.oral%></td>
+<tr>
+<th>Practical of Other Sub</th>
+<td><%=teacher.practicalOther%></td>
+<tr>
+<th>Practical(Survey)</th>
+<td><%=teacher.practicalOther%></td>
+<tr>
+<th>Practical(Workshop)</th>
+ <td><%=teacher.practicalWorkshop%></td>
+<tr>
+<th>TermWork</th>
+ <td><%=teacher.termwork%></td>
+<tr>
+ <th>Project TermWork</th>
+<td><%=teacher.prTermWork%></td>
+<tr>
+<th>Project Oral</th>
+ <td><%=teacher.prOral%></td>
+<tr>
+<th>Project Seminar</th>
+<td><%=teacher.prSeminar%></td>
+</table>
+</center>
+<br><br>
+<center><a href="/rates/showteacherrates/<%=teacher._id%>/edit">Edit</a></center> 
+</body>
+ 
+</html>
+<%- include ../partial/footer%>

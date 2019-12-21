@@ -1,0 +1,30 @@
+<html>
+ <head>
+
+      <title>Registration Form</title>
+           <link rel="stylesheet" href="/stylesheets/stylemain.css">
+
+</head>
+<body>
+<br><br>
+ <div class="reg">
+<br><br>
+<form id="reg" action="/<%=year%>/<%=exam%>" method="POST">
+<label>Subject Name:</label>  
+<input type="text" placeholder="Enter Subject Name" name="sub" required id="name"><br><br>
+<label>No of students:</label>
+<input type="text" placeholder="Enter No of students" name="stud" required id="name"><br><br>
+<label>preparation date:</label>
+<input type="date" placeholder="Enter the preparation date" name="prep" id="name"><br><br>
+<label>exam date:</label>
+<input type="date" placeholder="Enter the exam date" name="examdate" id="name"><br><br>
+<label>cleaning date:</label>
+<input type="date" placeholder="Enter cleaning date" name="cleandate" id="name"><br><br>
+<label>Exam days:</label>
+<input type="number" placeholder="Enter the days of exam" name="examdays" id="name"><br><br>
+
+<button type="submit" id="sub">submit</button>
+</form>
+</body>
+</html>
+

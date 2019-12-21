@@ -1,0 +1,58 @@
+<%- include ../partial/header%>
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/stylestaff.css">
+</head>
+<body>
+<div class="reg">
+<form  action="/<%=year%>/<%=exam%>/<%=combineid%>/<%=staffdata.type%>/<%=id%>?_method=delete" method="post">
+<label>year :<input type="text" value="<%=year%>" id="name"><br><br>
+
+<label>Exam :<input type="text" value="<%=exam%>" id="name"><br><br>
+
+<label>Type:<input type="text" value="<%=staffdata.type%>" id="name"><br><br>
+
+<label>payment Reg No : <input type="text" value="<%=staffdata.pay_reg%>"id="name"><br><br>
+
+<label>voucher NO:<input type="text" value="<%=staffdata.voucher%>" id="name"><br><br>
+
+<label>cheque No :<input type="text" value="<%=staffdata.cheque%>" id="name"><br><br>
+
+<label>CBF No:<input type="text" value="<%=staffdata.cbf%>" id="name"><br><br>
+
+<label>Name of Examiner:<input type="text" value="<%=staffdata.Name%>" id="name"><br><br>
+
+<label>Name of college :<input type="text" value="<%=combine.college%>" id="name"><br><br>
+
+<label>subject :<input type="text" value="<%=combine.subject%>" id="name"><br><br>
+
+<label>students :<input type="text"  value="<%=combine.students%>" id="name"><br><br>
+
+<label>date of preparation:<input type="text" value="<%=combine.date_prep%>" id="name"> <br><br>
+
+<label>date of examination:<input type="text" value="<%=combine.date_exam%>" id="name"><br><br>
+
+<label>date of cleaning:<input type="text" value="<%=combine.date_clean%>" id="name"><br><br>
+ 
+<label>days of exam :<input type="text" value="<%=combine.examdays%>" id="name"></br><br>
+
+<label>work hours :<input type="text" value="<%=staffdata.hours%>" id="name"></br><br>
+<label>batches :<input type="text" value="<%=staffdata.batches%>" id="name"></br><br>
+
+
+<label>amount of preparation days :<input type="text" value="<%=staffdata.prepcost%>" id="name"><br><br>
+<label>amount of examination days :<input type="text" value="<%=staffdata.examcost%>" id="name"><br><br>
+<label>amount of cleaning days :<input type="text" value="<%=staffdata.cleancost%>" id="name"><br><br>
+<label>total amount :<input type="text" value="<%=staffdata.total%>" id="name"> <br>
+<a href="/<%=year%>/<%=exam%>/<%=combineid%>/<%=staffdata.type%>/<%=id%>/edit">edit</a><br><br>
+
+   <input id="sub" type="submit" value="Delete"> <br><br>
+
+<a href="/<%=year%>/<%=exam%>/<%=combineid%>">Save</a>
+</form>
+</div>
+</body>
+</html>
+<%- include ../partial/footer%>

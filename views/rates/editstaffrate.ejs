@@ -1,0 +1,24 @@
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/stylenorm.css">
+</head>
+
+<body>
+<br><br>
+<div class="reg">
+
+<form id="reg" action="/rates/showstaffrates/<%=staff._id%>?_method=PUT" method="POST">
+<br><br>
+Hour:<%=staff.hours%><br><br>
+<label>Expert:</label><input type="number" name="staff[expert]" value=<%=staff.expert% id="name"><br><br>
+<label>Lab Assistant</label><input type="number" name="staff[lab]" value=<%=staff.lab% id="name"> <br><br>
+<label>Technical Assistant</label><input type="number" name="staff[techAsst]" value=<%=staff.techAsst% id="name"><br><br>
+<label>Peon</label><input type="number" name="staff[peons]" value=<%=staff.peons% id="name"><br><br>
+
+<button id="sub" type="submit">submit</button>
+</form>
+</div>
+</body>
+</html>

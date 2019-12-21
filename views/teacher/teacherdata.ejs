@@ -1,0 +1,45 @@
+
+<% include ../partial/header.ejs%>
+
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/styleteacher.css">
+</head>
+<body>
+<br><br>
+ <div class="reg">
+
+<form action="/<%=year%>/<%=exam%>/<%=combineid%>/teacher/<%=teacherdata.type%>/<%=id%>?_method=delete" method="post">
+ 
+<label>Rem Reg No. : <%=teacherdata.rem_reg%><br><br>
+
+<label>voucher NO. :<%=teacherdata.voucher%><br><br>
+
+<label>cheque No. :<%=teacherdata.cheque%><br><br>
+
+<label>Name of Examiner:<%=teacherdata.Name%><br><br>
+
+<label>Name of college :<%=combine.college%><br><br>
+
+<label>subject :<%=combine.subject%><br><br>
+
+<label>students :<%=combine.students%><br><br>
+
+<label>alongwith:<%=teacherdata.alongwith%><br><br>
+
+<label>telephone:<%=teacherdata.telephone%><br><br>
+
+<label>total amount:<%=teacherdata.total%><br><br>
+
+<label>rate per student:<%=teacherdata.rate%><br><br>
+ 
+<a href="/<%=year%>/<%=exam%>/<%=combineid%>/teacher/<%=teacherdata.type%>/<%=id%>/edit">edit</a><br><br>
+
+   <input id="sub" type="submit" value="Delete"> <br><br>
+</form>
+<a href="/<%=year%>/<%=exam%>/<%=combineid%>">back to main</a>
+</div>
+</body>
+<%include ../partial/footer.ejs%>

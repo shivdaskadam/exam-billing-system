@@ -1,0 +1,35 @@
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/stylenorm.css">
+</head>
+
+<body>
+
+<div class="reg">
+<br><br>
+<form id="reg" action="/rates/showteacherrates/<%=teacher._id%>?_method=PUT" method="POST">
+YEAR:<%=teacher.year%><br><br>
+<label>Oral:</label><input type="number" name="teacher[oral]" value=<%=teacher.oral% id="name"><br><br>
+<label>Practical of other sub:</label>
+<input type="number" name="teacher[practicalOther]" value=<%=teacher.practicalOther% id="name"><br><br>
+<label>Practical(Workshop):</label>
+<input type="number" name="teacher[practicalWorkshop]" value=<%=teacher.practicalWorkshop% id="name"><br><br>
+<label>Practical(Survey) :</label>
+<input type="number" name="teacher[practicalSurvey]" value=<%=teacher.practicalSurvey% id="name"><br><br>
+<label>TermWork :</label>
+<input type="number" name="teacher[termwork]" value=<%=teacher.termwork% id="name"><br><br>
+<label>Project TermWork :
+</label><input type="number" name="teacher[prTermWork]" value=<%=teacher.prTermWork% id="name"><br><br>
+<label>Project Oral :
+</label><input type="number" name="teacher[prOral]" value=<%=teacher.prOral% id="name"><br><br>
+<label>Project Seminar :
+</label><input type="number" name="teacher[prSeminar]" value=<%=teacher.prSeminar% id="name"><br><br>
+
+
+<button type="submit" id="sub">submit</button>
+</form>
+</div>
+</body>
+</html

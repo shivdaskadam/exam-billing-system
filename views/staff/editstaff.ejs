@@ -1,0 +1,34 @@
+<%- include ../partial/header%>
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="/stylesheets/stylestaff.css">
+</head>
+<body>
+<br><br>
+ <div class="reg">
+<form id="reg" action="/<%=year%>/<%=exam%>/<%=combineid%>/<%=staffdata.type%>/<%=id%>?_method=PUT" method="POST">
+<br><br>
+<label>Payment Reg No:</label>
+<input type="text" placeholder="Enter the payment Reg  no" name="staffdata[pay_reg]" value=<%=staffdata.pay_reg% id="name"><br><br>
+<label> Voucher No:</label>
+<input type="text" placeholder="Enter the Voucher no" name="staffdata[voucher]" value=<%=staffdata.voucher% id="name"><br><br>
+<label>Cheque No:</label>
+<input type="text" placeholder="Enter the Cheque no" name="staffdata[cheque]"value=<%=staffdata.cheque% id="name"><br><br>
+<label>CBF</label>
+<input type="text" placeholder="Enter the CBF"  name="staffdata[cbf]"value=<%=staffdata.cbf% id="name"><br><br>
+<label>Name</label>
+<input type="text" placeholder="Enter Name"  name="staffdata[Name]"value=<%=staffdata.Name% id="name"><br><br>
+<label>Address</label>
+<input type="text" placeholder="Enter Valid Address" name="staffdata[address]"value=<%=staffdata.address% id="name"><br><br>
+<label>Hours</label>
+<input type="number" placeholder="Enter the hours(4 or 7)" name="staffdata[hours]"value=<%=staffdata.hours% id="name"><br><br>
+
+<button id="sub" type="submit">submit</button>
+</form>
+</div>
+</body>
+</html>
+
+<%- include ../partial/footer%>

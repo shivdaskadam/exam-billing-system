@@ -1,0 +1,33 @@
+<html>
+<head>
+
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="stylesheets/stylemain.css">
+</head>
+
+<body>
+<br><br>
+ <div class="reg">
+<form id="reg" action="/<%=year%>/<%=exam%>/<%=combineid%>?_method=put" method="POST">
+<br><br>
+<label>Subject Name:</label>
+<input type="text" placeholder="Enter Subject Name" name="combine[subject]" value=<%=combine.subject% id="name"><br><br>
+<label>No of Students:</label>
+<input type="text" placeholder="Enter No of students" name="combine[students]" value=<%=combine.students% id="name"><br><br>
+<label>Prepration :</label>
+<input type="date" placeholder="Enter the preparation date" name="combine[date_prep]" value=<%=combine.date_prep% id="name"><br><br>
+<label>Exam Date:</label>
+<input type="date" placeholder="Enter the exam date" name="combine[date_exam]"  value=<%=combine.date_exam% id="name"><br><br>
+<label>Cleaning name:</label>
+<input type="date" placeholder="Enter cleaning date" name="combine[date_clean]" value=<%=combine.date_clean% id="name"><br><br>
+<label>Exam Days:</label>
+<input type="number" placeholder="Enter the days of exam" name="combine[examdays]" value=<%=combine.examdays% id="name"><br><br>
+
+<button type="submit" id="sub">submit</button>
+</form>
+
+</div>
+
+</body>
+
+</html>
