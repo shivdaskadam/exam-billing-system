@@ -52,8 +52,8 @@ app.use("/",staffroute);
 
 
 
-
-app.listen(8080,process.env.IP,function(){
+const port = process.env.PORT || 3000;
+app.listen(port,process.env.IP,function(){
     
     console.log("ok");
 });
